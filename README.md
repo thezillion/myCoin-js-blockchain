@@ -1,9 +1,6 @@
-# Webpack ES6 boilerplate
+# MyCoin JS Blockchain implementation
 
-[![tests][tests]][tests-url]
-[![coverage][cover]][cover-url]
-
-A minimalistic Webpack 2 ES6 boilerplate project.
+A minimalistic JS Blockchain that implements a coin in-browser.
 
 ## Prerequisites
 
