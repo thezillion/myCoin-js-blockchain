@@ -92,6 +92,10 @@ export class Blockchain {
 			const currentBlock = this.chain[i];
 			const previousBlock = this.chain[i - 1];
 
+			if (this.hash.substring(0, this.difficulty) !== Array(this.difficulty + 1).join('0')) {
+				return false;
+			}
+
 			if (currentBlock.hash !== currentBlock.calculateHash()) {
 				return false;
 			}
