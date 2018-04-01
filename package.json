@@ -25,7 +25,7 @@
   "scripts": {
     "start": "webpack-dev-server --config conf/webpack.dev.js",
     "build": "webpack --env=prod --progress --profile --colors",
-    "lint": "eslint ./src/**.js",
+    "lint": "eslint ./src/**.js --fix",
     "coverage": "jest --coverage --config=conf/jest.config.js",
     "test": "jest --config=conf/jest.config.js",
     "test:watch": "jest --watch"
@@ -50,5 +50,7 @@
     "webpack-dev-server": "2.7.1",
     "webpack-merge": "4.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
 }
