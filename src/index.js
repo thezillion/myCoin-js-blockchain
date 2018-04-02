@@ -7,14 +7,17 @@ function addTransaction(fromAddress, toAddress, amount) {
 	myCoin.createTransaction(new Transaction(fromAddress, toAddress, amount));
 }
 
-setInterval(function() {
-	myCoin.minePendingTransactions();
-	document.getElementById('root').innerHTML = (JSON.stringify(myCoin));
-}, 5000);
+myCoin.minePendingTransactions();
+document.getElementById('root').innerHTML = (JSON.stringify(myCoin));
 
 
 document.getElementById('addTransBtn').addEventListener('click', function() {
 	addTransaction(document.getElementById('from_addr').value, document.getElementById('to_addr').value, document.getElementById('amount').value);
+});
+
+document.getElementById('mineBtn').addEventListener('click', function() {
+	myCoin.minePendingTransactions();
+	document.getElementById('root').innerHTML = (JSON.stringify(myCoin));
 });
 
 
